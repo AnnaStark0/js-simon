@@ -17,20 +17,30 @@
 // Ancora un grande abbraccio :faccia_sorridente_con_3_cuori:
 
 
+// - Hello -
 
 // let name = prompt ('Inserisci il tuo Nome');
 
 // alert (`Ciao ${name} ! Pront* per Simon Says? ` );
 
 
-let arrayRandom = [];
+// - Genero 5 Numeri Random -> Gli inserisco in un  Array vuoto
 
-// - Genero 5 Numeri Random -
+let arrayRandom = [];
 
 for(let i = 0; i <= 5; i++) {
     let numRandom = Math.floor(Math.random() * 100);
-    console.log(numRandom);
+    // console.log(numRandom);
+
+    arrayRandom.push (numRandom);
+
+console.log(arrayRandom);
 }
+
+
+
+
+
 
 
 
