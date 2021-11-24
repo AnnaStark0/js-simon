@@ -24,23 +24,31 @@
 // alert (`Ciao ${name} ! Pront* per Simon Says? ` );
 
 
-// - Genero 5 Numeri Random -> Gli inserisco in un  Array vuoto
+// - Genero 5 Numeri Random -> Gli inserisco in un Array vuoto -
 
 let arrayRandom = [];
 
-for(let i = 0; i <= 5; i++) {
+for (let i = 0; i <= 5; i++) {
     let numRandom = Math.floor(Math.random() * 100);
     // console.log(numRandom);
 
-    arrayRandom.push (numRandom);
+    arrayRandom.push(numRandom);
 
-console.log(arrayRandom);
+    console.log(arrayRandom);
 }
 
+// - Stampo l'Array nel Dom -
+document.getElementById("numeri").innerHTML = arrayRandom;
 
+// - Timer
 
+const clock = setInterval(myTimer, 1000);
 
+let second = 0;
 
-
-
-
+function myTimer () {
+// console.log(second);
+const timer = document.getElementById('timer');
+timer.innerHTML = second;
+second++;
+}
