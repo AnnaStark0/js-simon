@@ -30,7 +30,7 @@ Osserva attentamente i numeri. ` );
 let arrayRandom = [];
 
 for (let i = 0; i < 5; i++) {
-    let numRandom = Math.floor(Math.random() * 1000);
+    let numRandom = Math.floor(Math.random() * 100);
     // console.log(numRandom);
 
     arrayRandom.push(numRandom);
@@ -44,7 +44,7 @@ document.getElementById("numeri").innerHTML = arrayRandom;
 
 // --- Timer 10 sec ---
 
-const clock = setInterval(myTimer, 100);
+const clock = setInterval(myTimer, 1000);
 
 let second = 0;
 
