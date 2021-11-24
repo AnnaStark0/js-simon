@@ -24,7 +24,7 @@
 // alert (`Ciao ${name} ! Pront* per Simon Says? ` );
 
 
-// - Genero 5 Numeri Random -> Gli inserisco in un Array vuoto -
+// ---- Genero 5 Numeri Random -> Gli inserisco in un Array vuoto ---
 
 let arrayRandom = [];
 
@@ -37,18 +37,32 @@ for (let i = 0; i <= 5; i++) {
     console.log(arrayRandom);
 }
 
-// - Stampo l'Array nel Dom -
+// --- Stampo l'Array nel Dom ---
 document.getElementById("numeri").innerHTML = arrayRandom;
 
-// - Timer
+
+// --- Timer 30 sec ---
 
 const clock = setInterval(myTimer, 1000);
 
 let second = 0;
 
 function myTimer () {
-// console.log(second);
+
 const timer = document.getElementById('timer');
 timer.innerHTML = second;
+
+if(second == 10 ) {
+    document.getElementById("numeri").innerHTML = '';
+    clearInterval(clock);
+    alert ('Tempo scaduto');
+    // --- PROMPT * 5 ---
+let userN = prompt ('Inserisci ,uno alla volta, i numeri che hai visto precedentemente');
+    
+}
 second++;
 }
+
+
+
+
