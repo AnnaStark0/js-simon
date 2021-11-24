@@ -21,14 +21,15 @@
 
 // let name = prompt ('Inserisci il tuo Nome');
 
-// alert (`Ciao ${name} ! Pront* per Simon Says? ` );
+// alert (`Ciao ${name} ! Pront* per Simon Says? 
+// Osserva attentamente i numeri. ` );
 
 
 // ---- Genero 5 Numeri Random -> Gli inserisco in un Array vuoto ---
 
 let arrayRandom = [];
 
-for (let i = 0; i <= 5; i++) {
+for (let i = 0; i < 5; i++) {
     let numRandom = Math.floor(Math.random() * 100);
     // console.log(numRandom);
 
@@ -47,22 +48,21 @@ const clock = setInterval(myTimer, 1000);
 
 let second = 0;
 
-function myTimer () {
+function myTimer() {
 
-const timer = document.getElementById('timer');
-timer.innerHTML = second;
+    const timer = document.getElementById('timer');
+    timer.innerHTML = second;
 
-if(second == 10 ) {
-    document.getElementById("numeri").innerHTML = '';
-    clearInterval(clock);
-    alert ('Tempo scaduto');
-    // --- PROMPT * 5 ---
-let userN = prompt ('Inserisci ,uno alla volta, i numeri che hai visto precedentemente');
-    
+    if (second == 10) {
+        document.getElementById("numeri").innerHTML = '';
+        clearInterval(clock);
+        alert('Tempo scaduto');
+        // --- PROMPT * 5 ---
+        
+for(let i = 0; i < 5 ; i++) {
+    let userN = prompt('Inserisci ,uno alla volta, i numeri che hai visto precedentemente');
 }
-second++;
+
+    }
+    second++;
 }
-
-
-
-
