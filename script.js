@@ -42,7 +42,7 @@ for (let i = 0; i < 5; i++) {
 document.getElementById("numeri").innerHTML = arrayRandom;
 
 
-// --- Timer 30 sec ---
+// --- Timer 10 sec ---
 
 const clock = setInterval(myTimer, 1000);
 
@@ -61,16 +61,14 @@ function myTimer() {
         // --- PROMPT * 5 ---
         let arrayUser = [];
 
+
         for (let i = 0; i < 5; i++) {
             let userN = parseInt(prompt('Inserisci ,uno alla volta, i numeri che hai visto precedentemente'));
+
+            arrayUser.push(userN);
+
+            console.log(arrayUser);
         }
-
-        arrayUser.push(userN);
-
-        console.log(arrayUser);
-
-        
-
     }
     second++;
 }
