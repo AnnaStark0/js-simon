@@ -19,10 +19,10 @@
 
 // - Hello -
 
-// let name = prompt ('Inserisci il tuo Nome');
+let name = prompt ('Inserisci il tuo Nome');
 
-// alert (`Ciao ${name} ! Pront* per Simon Says? 
-// Osserva attentamente i numeri. ` );
+alert (`Ciao ${name} ! Pront* per Simon Says? 
+Osserva attentamente i numeri. ` );
 
 
 // ---- Genero 5 Numeri Random -> Gli inserisco in un Array vuoto ---
@@ -30,7 +30,7 @@
 let arrayRandom = [];
 
 for (let i = 0; i < 5; i++) {
-    let numRandom = Math.floor(Math.random() * 100);
+    let numRandom = Math.floor(Math.random() * 1000);
     // console.log(numRandom);
 
     arrayRandom.push(numRandom);
@@ -44,7 +44,7 @@ document.getElementById("numeri").innerHTML = arrayRandom;
 
 // --- Timer 10 sec ---
 
-const clock = setInterval(myTimer, 1000);
+const clock = setInterval(myTimer, 100);
 
 let second = 0;
 
@@ -68,7 +68,15 @@ function myTimer() {
             arrayUser.push(userN);
 
             console.log(arrayUser);
+            document.getElementById("userNumber").innerHTML = arrayUser;
+        }
+
+        // --- Confrontare Numeri Array ---
+        for (let i = 0; i < arrayUser.length; i++) {
+            console.log(i);
         }
     }
     second++;
 }
+
+// Non finito per mancanza di tempo
