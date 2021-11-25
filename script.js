@@ -72,11 +72,20 @@ function myTimer() {
         }
 
         // --- Confrontare Numeri Array ---
-        for (let i = 0; i < arrayUser.length; i++) {
-            console.log(i);
-        }
+
+        const numOk = [];
+        for(let i = 0; i < arrayUser.length; i++) {
+            if(arrayRandom.includes(arrayUser[i]) == true) {
+                numOk.push(arrayUser[i]);
+            }
+    }
+    if (numOk.length == 0) {
+        alert("Hai Perso :(");
+    } else {
+        alert (`Hai indovinato ${numeriValidi.length}`);
     }
     second++;
+}
 }
 
 // Non finito per mancanza di tempo
